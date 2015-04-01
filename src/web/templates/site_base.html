@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!--
+        render_datetime:    {{ render_time }}
+        render_hostname:    {{ render_host }}
+    -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Language" content="en-US">
+    <link rel="icon" href="{{ STATIC_URL }}ico/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ STATIC_URL }}ico/favicon.ico" type="image/x-icon" />
+    <meta name="author" content="PayPal.com">
+    <meta name="copyright" content="&copy; 2012 PayPal.com">
+    <meta name="description" content="{% block meta_description %}Next generation deployment system.{% endblock %}" />
+    
+    <title>{% block title %} Services{% endblock %}</title>
+
+    <!-- CSS Styles  -->
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css" media="all">
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap_override.css" media="all">
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/local.css" media="all">
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}dataTables/bootstrap.dataTables.css" media="all">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+    {% block styles %}{% endblock %}
+
+    <!-- JavaScript -->
+    <script type="text/javascript" charset="utf-8" src="{{ STATIC_URL }}js/lib/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ STATIC_URL }}jquery-ui-1.10.1.custom/js/jquery-ui-1.10.1.custom.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ STATIC_URL }}js/lib/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ STATIC_URL }}dataTables/bootstrap.dataTables.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+    {% block scripts %}{% endblock %}
+
+
+  </head>
+
+  <style>
+
+    .navbar .brand {
+        color: #FFFFFF;
+        font-family: Blairmditc TT;
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: 10px;
+        padding: 0;
+    }
+  </style>
+
+  <body>
+    {% block navbar %} 
+
+    <!-- div class="navbar navbar-inverse navbar-fixed-top"-->
+          <!-- div class="nav-menu-separator"> </div -->
+    <!-- div class="navbar navbar-inverse navbar-fixed-top"-->
+    <div class="navbar navbar-inverse  navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/dexis/">
+                <img src="{{ STATIC_URL }}/images/swiss_knife_transparent.png" style="height: 30px; margin-top: -5px;"/>
+                Services
+          </a>
+          <!-- div class="nav-menu-separator"> </div -->
+        
+           
+            <p class="navbar-text pull-right">&nbsp;&nbsp; <a href="mailto:sreekanthy21@gmail.com" class="navbar-link">Feedback</a>&nbsp;&nbsp; </p>
+            <p class="navbar-text pull-right">&nbsp;&nbsp; <a href="#" class="navbar-link">Help</a>&nbsp;&nbsp; </p>
+                
+          <ul class="nav pull-right" >
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">View<b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                  <li><a href="/#/">Help</a></li>
+                          </ul>
+                      </li>
+            </ul>
+                
+            <ul class="nav pull-right" style="display:none;">
+                      <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">XLab<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                              <li class="nav-header">Upcoming Features</li>
+                              <li class="divider"></li>
+                              <li class="nav-header">Experimental</li>
+                            </ul>
+                      </li>
+              </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+    {% endblock %}
+
+    <div id="content" style="margin: 15px 10px 10px 10px;">
+
+    {% block content %} 
+        <h1>Coming Soon!</h1> 
+    {% endblock %}
+    
+    </div>
+
+    </body>
+</html>

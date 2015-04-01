@@ -1,0 +1,1 @@
+from reource import Resource
